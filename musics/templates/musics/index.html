@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %} Music Player {% endblock %}
+<!--  -->
+{% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'musics/css/style.css' %}" />
+<link
+  rel="stylesheet"
+  href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"
+/>
+{% endblock %}
+<!--  -->
+{% block content %}
+<h1 class="display-4">Musics Collection</h1>
+
+{% for music in object_list %}
+<audio data-role="audio" data-src="{{music.file.url}}"></audio>
+{% endfor %}
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+{% endblock %}

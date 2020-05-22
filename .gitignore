@@ -5,3 +5,4 @@ migrations/
 .vscode/
 *.pyc
 *.log
+media/

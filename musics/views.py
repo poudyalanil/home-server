@@ -1,6 +1,9 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Music
 
 
-def index(request):
-    return HttpResponse("Hello From Music's Page")
+class Index(ListView):
+    model = Music
+    template_name = "musics/index.html"
